@@ -48,11 +48,11 @@ The model used in the example below replicates Equation (10) from the following 
 The system is:
 
 $$
-\dot{\phi}_1 = \omega_1(t) + a_1 \sin(\phi_1) + a_3(t) \sin(\phi_2) + \sqrt{E_{11}}\xi_1(t)
+\frac{d\phi_1}{dt} = \omega_1(t) + a_1 \sin(\phi_1) + a_3(t) \sin(\phi_2) + \sqrt{E_{11}}\xi_1(t)
 $$
 
 $$
-\dot{\phi}_2 = \omega_2 + a_2 \sin(\phi_1) + a_4 \sin(\phi_2) + \sqrt{E_{22}}\xi_2(t)
+\frac{d\phi_2}{dt} = \omega_2 + a_2 \sin(\phi_1) + a_4 \sin(\phi_2) + \sqrt{E_{22}}\xi_2(t)
 $$
 
 
