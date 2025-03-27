@@ -1,0 +1,13 @@
+README.md
+setup.py
+bayesinf/__init__.py
+bayesinf/inference.py
+bayesinf/model.py
+bayesinf/simulate.py
+bayesinf/utils.py
+bayesinf/visualize.py
+bayesinf.egg-info/PKG-INFO
+bayesinf.egg-info/SOURCES.txt
+bayesinf.egg-info/dependency_links.txt
+bayesinf.egg-info/requires.txt
+bayesinf.egg-info/top_level.txt

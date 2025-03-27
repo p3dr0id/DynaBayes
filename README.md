@@ -1,0 +1,66 @@
+# bayesinf
+
+**Bayesian Inference for Coupled Phase Oscillators**
+
+This Python package implements a method for dynamic Bayesian inference of parameters in networks of coupled phase oscillators. It allows simulation and inference using a general model of phase interaction, including both direct phase coupling and coupling through phase differences.
+
+## Model Formulation
+
+The general form of the system implemented is:
+
+\[
+\frac{d\phi_i}{dt} = \omega_i(t) + \sum_{j=1}^{N} A_{ij}(t) \sin(\phi_j) + \sum_{j=1}^{N} B_{ij}(t) \sin(\phi_j - \phi_i)
+\]
+
+Where:
+
+- \(\phi_i\) is the phase of the \(i\)-th oscillator.
+- \(\omega_i(t)\) is the intrinsic frequency, possibly time-dependent.
+- \(A_{ij}(t)\) controls the influence of \(\sin(\phi_j)\) on \(\phi_i\).
+- \(B_{ij}(t)\) controls the influence of the phase difference \(\sin(\phi_j - \phi_i)\).
+
+## Reference
+
+This package is based on the Bayesian inference approach described in:
+
+> Stankovski, T., Ticcinelli, V., McClintock, P.V.E. & Stefanovska, A. (2014). A tutorial on time-evolving dynamical Bayesian inference. Eur. Phys. J. Special Topics 222, 2467–2485. https://doi.org/10.1140/epjst/e2014-02286-7
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/bayesinf.git
+cd bayesinf
+pip install -e .
+```
+
+## Quick Example
+
+```python
+import numpy as np
+import bayesinf as bi
+
+# Define model parameters
+omega = [lambda t: 2 - 0.5 * np.sin(2 * np.pi * 0.00151 * t), bi.const(4.53)]
+A = [
+    [bi.const(0.8), lambda t: 0.8 - 0.3 * np.sin(2 * np.pi * 0.0012 * t)],
+    [bi.const(0.0), bi.const(0.6)]
+]
+B = [
+    [bi.const(0.0), bi.const(0.0)],
+    [bi.const(0.0), bi.const(0.0)]
+]
+
+# Simulate data
+phi, true_funcs, t = bi.simulate_model(omega, A, B, E=[0.03, 0.01], t_max=2000, dt=0.01)
+
+# Inference
+params, centers = bi.run_inference(phi, dt=0.01, E_true=[0.03, 0.01], pw=0.2, t=t)
+
+# Visualization
+bi.plot_parameters(params, true_funcs, centers)
+bi.show_summary(params, true_funcs, centers)
+```
+
+## License
+
+MIT License
