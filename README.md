@@ -47,13 +47,14 @@ The model used in the example below replicates Equation (10) from the following 
 
 The system is:
 
-<p align="center">
-  <img src="https://render.githubusercontent.com/render/math?math=\dot{\phi}_1 = \omega_1(t) + a_1 \sin(\phi_1) + a_3(t) \sin(\phi_2) + \sqrt{E_{11}} \, \xi_1(t)">
-</p>
+$$
+\dot{\phi}_1 = \omega_1(t) + a_1 \sin(\phi_1) + a_3(t) \sin(\phi_2) + \sqrt{E_{11}}\, \xi_1(t)
+$$
 
-<p align="center">
-  <img src="https://render.githubusercontent.com/render/math?math=\dot{\phi}_2 = \omega_2 + a_2 \sin(\phi_1) + a_4 \sin(\phi_2) + \sqrt{E_{22}} \, \xi_2(t)">
-</p>
+$$
+\dot{\phi}_2 = \omega_2 + a_2 \sin(\phi_1) + a_4 \sin(\phi_2) + \sqrt{E_{22}}\, \xi_2(t)
+$$
+
 
 
 Where:
