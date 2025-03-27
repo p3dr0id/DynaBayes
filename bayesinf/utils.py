@@ -31,3 +31,14 @@ def gerar_true_funcs_from_matrices(omega, A, B):
             row.append(B[i][j])
         true_funcs.append(row)
     return true_funcs
+
+def generate_param_names(n_osc):
+    names = []
+    for i in range(n_osc):
+        row = [f'ω{i+1}']  # Intrinsic frequency
+        for j in range(n_osc):
+            row.append(f'A{i+1}{j+1}')
+        for j in range(n_osc):
+            row.append(f'B{i+1}{j+1}')
+        names.append(row)
+    return names
