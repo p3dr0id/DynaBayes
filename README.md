@@ -23,14 +23,27 @@ Where:
 
 ---
 
-## 📌 Example from the Reference Paper
+## Reference
 
-The model used in the example below replicates Equation (10) from the following paper:
+This package is based on the Bayesian inference approach described in:
 
-> Stankovski, T., Ticcinelli, V., McClintock, P.V.E. & Stefanovska, A. (2014).  
-> *A tutorial on time-evolving dynamical Bayesian inference*.  
-> Eur. Phys. J. Special Topics 222, 2467–2485.  
-> [https://doi.org/10.1140/epjst/e2014-02286-7](https://doi.org/10.1140/epjst/e2014-02286-7)
+> Stankovski, T., Ticcinelli, V., McClintock, P.V.E. & Stefanovska, A. (2014). A tutorial on time-evolving dynamical Bayesian inference. Eur. Phys. J. Special Topics 222, 2467–2485. https://doi.org/10.1140/epjst/e2014-02286-7
+
+
+
+## 🔧 Installation
+
+```bash
+git clone https://github.com/yourusername/bayesinf.git
+cd bayesinf
+pip install -e .
+```
+
+---
+
+## ⚡ Quick Example
+
+The model used in the example below replicates Equation (10) from the following paper
 
 The system is:
 
@@ -50,18 +63,6 @@ Where:
 - $E_{11} = 0.03$, $E_{22} = 0.01$
 
 ---
-
-## 🔧 Installation
-
-```bash
-git clone https://github.com/yourusername/bayesinf.git
-cd bayesinf
-pip install -e .
-```
-
----
-
-## ⚡ Quick Example
 
 ```python
 import numpy as np
