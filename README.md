@@ -11,7 +11,7 @@ This Python package implements a method for dynamic Bayesian inference of parame
 The general form of the system implemented is:
 
 $$
-\frac{d\phi_i}{dt} = \omega_i(t) + \sum_{j=1}^{N} A_{ij}(t)\sin(\phi_j) + \sum_{j=1}^{N} B_{ij}(t)\sin(\phi_j - \phi_i) + \sqrt{E_{ii}} \xi_i
+\frac{d\phi_i}{dt} = \omega_i(t) + \sum_{j=1}^{N} A_{ij}(t)\sin(\phi_j) + \sum_{j=1}^{N} B_{ij}(t)\sin(\phi_j - \phi_i) + \sqrt{E_{ii}} \xi_i(t)
 $$
 
 Where:
@@ -43,7 +43,7 @@ pip install -e .
 
 ## ⚡ Quick Example
 
-The model used in the example below replicates Equation (10) from the following paper
+The model used in the example below replicates Equation (10) from the paper
 
 The system is:
 
