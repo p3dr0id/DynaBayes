@@ -34,7 +34,7 @@ This package is based on the Bayesian inference approach described in:
 ## 🔧 Installation
 
 ```bash
-git clone https://github.com/yourusername/bayesinf.git
+git clone https://github.com/p3dr0id/bayesinf.git
 cd bayesinf
 pip install -e .
 ```
