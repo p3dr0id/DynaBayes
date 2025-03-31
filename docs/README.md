@@ -1,6 +1,6 @@
 # bayesinf Documentation
 
-This directory contains the documentation of the bayesinf Python package for Bayesian inference in coupled phase oscillators.
+This directory contains the documentation of the dynabayes Python package for Bayesian inference in coupled phase oscillators.
 
 ## Modules
 
