@@ -1,18 +1,21 @@
 from setuptools import setup, find_packages
 
+with open("README.md", encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='dynabayes',
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
-        "numpy>=1.26.0",
+        "numpy",
         "matplotlib",
-        "pandas>=2.2.2"
+        "pandas"
     ],
     author='Pedro D. Pinto',
-    author_email='pedrodp42@gmail.com'
+    author_email='pedrodp42@gmail.com',
     description='Dynamic Bayesian Inference Package',
-    long_description=open("README.md").read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/p3dr0id/DynaBayes',
     classifiers=[
@@ -22,3 +25,4 @@ setup(
     ],
     python_requires='>=3.8',
 )
+

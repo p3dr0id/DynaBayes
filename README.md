@@ -33,6 +33,14 @@ This package is based on the dynamic Bayesian inference approach described in:
 
 ## 🔧 Installation
 
+You can install DynaBayes directly from PyPI using pip:
+
+```bash
+pip install dynabayes
+``` 
+
+Alternatively, to install the latest development version from the GitHub repository:
+
 ```bash
 git clone https://github.com/p3dr0id/DynaBayes.git
 cd DynaBayes
