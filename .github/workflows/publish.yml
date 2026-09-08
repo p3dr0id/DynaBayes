@@ -29,6 +29,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install build
 
+      - name: Remove stale build artifacts
+        run: rm -rf build dist *.egg-info
+
       - name: Build distribution
         run: python -m build
 
