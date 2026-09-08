@@ -4,7 +4,7 @@ All notable changes to DynaBayes will be documented in this file.
 
 The format follows the spirit of [Keep a Changelog](https://keepachangelog.com/), and version numbers follow semantic versioning.
 
-## [Unreleased]
+## [0.2.0] - 2026-09-08
 
 ### Changed
 
@@ -29,6 +29,7 @@ The format follows the spirit of [Keep a Changelog](https://keepachangelog.com/)
 - GitHub Actions continuous integration on Python 3.11 and 3.13.
 - `requirements-dev.txt` for development/test dependencies.
 - Explicit methodology/licensing documentation distinguishing the published DBI methodology from independent numerical cross-validation against MODA.
+- `docs/VALIDATION.md` recording synthetic, cross-reference, and S01 numerical-equivalence validation.
 
 ### Deprecated
 
@@ -49,6 +50,7 @@ The format follows the spirit of [Keep a Changelog](https://keepachangelog.com/)
 
 - The revised inference core is tested against independently generated synthetic systems with known time-dependent parameters and known noise covariance.
 - Numerical behaviour was cross-validated against the independently developed MODA reference implementation. No MODA source code is incorporated into DynaBayes.
+- The packaged implementation was compared with the validated self-contained S01 implementation. Maximum absolute differences were 2.66e-15 for inferred parameters, 1.39e-17 for posterior standard deviations, 2.78e-17 for `E`, and 4.35e-18 for the convergence criterion; the per-window iteration sequence was identical.
 
 ## [0.1.0]
 
