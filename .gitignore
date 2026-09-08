@@ -1,2 +1,9 @@
-# Ignorar metadados do setuptools
-dynabayes.egg-info/
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Packaging/build artifacts
+build/
+dist/
+*.egg-info/
