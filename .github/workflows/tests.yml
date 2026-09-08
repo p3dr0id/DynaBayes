@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - fix/dbi-moda-core
+      - fix/dbi-stankovski-core
   pull_request:
 
 jobs:
