@@ -10,35 +10,35 @@ DynaBayes is a Python package for simulation and time-evolving Bayesian inferenc
 
 The current model is
 
-$$
+```math
 \frac{d\phi_i}{dt} = \omega_i(t)
 + \sum_{j=1}^{N} A_{ij}(t)\sin(\phi_j)
 + \sum_{j=1}^{N} B_{ij}(t)\sin(\phi_j - \phi_i)
-+ \xi_i(t),
-$$
++ \xi_i(t)
+```
 
 with stochastic terms described by
 
-$$
+```math
 \langle \xi_i(t)\xi_j(t') \rangle
-= E_{ij}\,\delta(t-t').
-$$
+= E_{ij}\,\delta(t-t')
+```
 
 Here:
 
-- $\phi_i$ is the phase of oscillator $i$;
-- $\omega_i(t)$ is its time-dependent intrinsic frequency;
-- $A_{ij}(t)$ multiplies the direct phase term $\sin(\phi_j)$;
-- $B_{ij}(t)$ multiplies the phase-difference term $\sin(\phi_j-\phi_i)$;
-- $E$ is the inferred noise covariance matrix.
+- `phi_i` is the phase of oscillator `i`;
+- `omega_i(t)` is its time-dependent intrinsic frequency;
+- `A_ij(t)` multiplies the direct phase term `sin(phi_j)`;
+- `B_ij(t)` multiplies the phase-difference term `sin(phi_j - phi_i)`;
+- `E` is the inferred noise covariance matrix.
 
 Because
 
-$$
-B_{ii}\sin(\phi_i-\phi_i) = 0,
-$$
+```math
+B_{ii}\sin(\phi_i-\phi_i) = 0
+```
 
-the diagonal $B_{ii}$ terms are structural zeros. They are retained in the historical output layout for clarity and compatibility, but they are not included in the inverse problem.
+the diagonal `B_ii` terms are structural zeros. They are retained in the historical output layout for clarity and compatibility, but they are not included in the inverse problem.
 
 ---
 
@@ -158,17 +158,17 @@ result.pr
 result.p_internal
 ```
 
-For a window duration $T_w$, the propagation parameter used internally is
+For a window duration `T_w`, the propagation parameter used internally is
 
-$$
-p_{\mathrm{internal}} = T_w p_r.
-$$
+```math
+p_{\mathrm{internal}} = T_w p_r
+```
 
 For example, `window_seconds=40` and `pr=0.20` correspond to
 
-$$
-p_{\mathrm{internal}} = 8.
-$$
+```math
+p_{\mathrm{internal}} = 8
+```
 
 ---
 
@@ -215,11 +215,11 @@ New code should use the `InferenceResult` interface.
 
 The inference code is written for a general number of phase oscillators. For each equation, the active basis contains
 
-$$
-1,\qquad \sin(\phi_j),\qquad \sin(\phi_j-\phi_i),\quad j\ne i.
-$$
+```math
+1,\qquad \sin(\phi_j),\qquad \sin(\phi_j-\phi_i),\quad j\ne i
+```
 
-The package preserves the full historical $[\omega_i,A_{i1},\ldots,A_{iN},B_{i1},\ldots,B_{iN}]$ output layout, explicitly marking $B_{ii}$ as structural zeros.
+The package preserves the full historical `[omega_i, A_i1, ..., A_iN, B_i1, ..., B_iN]` output layout, explicitly marking `B_ii` as structural zeros.
 
 ---
 
